@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: ./app
+    image: devops-automation-starter:local
+    container_name: devops-automation-starter
+    ports:
+      - "8080:8080"
+    environment:
+      NODE_ENV: production
+      SERVICE_NAME: devops-automation-starter
+      PORT: 8080
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8080/healthz"]
+      interval: 30s
+      timeout: 5s
+      retries: 3

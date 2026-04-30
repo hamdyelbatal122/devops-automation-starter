@@ -1,0 +1,25 @@
+# Node
+node_modules/
+.env
+npm-debug.log
+
+# Logs
+logs
+*.log
+coverage/
+
+# Docker
+*.env
+.docker
+.dockerignore
+
+# Ansible
+*.retry
+
+# System
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

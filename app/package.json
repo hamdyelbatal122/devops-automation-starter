@@ -1,17 +1,21 @@
 {
-  "name": "dockerize",
-  "version": "1.0.0",
-  "description": "Docker end to end.",
+  "name": "devops-automation-starter-app",
+  "version": "2.0.0",
+  "description": "Production-ready Node.js sample for DevOps automation starter.",
   "main": "server.js",
+  "type": "commonjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "dev": "NODE_ENV=development node server.js",
+    "test": "node --test",
+    "lint": "node --check server.js && node --check server.test.js"
+  },
+  "engines": {
+    "node": ">=20"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "express": "^4.10.6"
-  },
-  "devDependencies": {
-    "grunt": "^0.4.5"
-  },
- 
+    "express": "^4.21.2"
+  }
+}
