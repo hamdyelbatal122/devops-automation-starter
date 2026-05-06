@@ -21,10 +21,5 @@ app.get("/healthz", (req, res) => {
   });
 });
 
-if (require.main === module) {
-  app.listen(port, () => {
-    console.log(`Service ${serviceName} listening on port ${port}`);
-  });
-}
 
 module.exports = app;
